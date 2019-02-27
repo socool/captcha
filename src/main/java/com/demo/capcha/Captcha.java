@@ -48,6 +48,14 @@ public class Captcha {
 
     @Override
     public String toString() {
-        return String.format("%s %s %s",leftOperand,"+","One");
+        String tmp = "";
+        if (this.getRightOperand() == 1) {
+            tmp = "One";
+        } else if(this.getRightOperand() == 2) {
+            tmp = "Two";
+        } else if(this.getRightOperand() == 3) {
+            tmp = "Three";
+        }
+        return String.format("%s %s %s",leftOperand,"+",tmp);
     }
 }

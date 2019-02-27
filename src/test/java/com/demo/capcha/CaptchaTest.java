@@ -21,4 +21,22 @@ public class CaptchaTest {
         Captcha captcha = new Captcha(1,3,1,1);
         Assert.assertEquals("3 + One",captcha.toString());
     }
+
+    @Test
+    public void firstPatternRightOperandShouldBeOne() {
+        Captcha captcha = new Captcha(1, 1,1,1);
+        Assert.assertEquals("1 + One", captcha.toString());
+    }
+
+    @Test
+    public void firstPatternRightOperandShouldBeTwo() {
+        Captcha captcha = new Captcha(1,1,1,2);
+        Assert.assertEquals("1 + Two", captcha.toString());
+    }
+
+    @Test
+    public void firstPatternRightOperandShouldBeThree() {
+        Captcha captcha = new Captcha(1,1,1,3);
+        Assert.assertEquals("1 + Three", captcha.toString());
+    }
 }
