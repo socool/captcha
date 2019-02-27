@@ -48,6 +48,12 @@ public class Captcha {
 
     @Override
     public String toString() {
-        return "1 + One";
+        if(this.getLeftOperand() == 1){
+            return "1 + One";
+        }else if(this.getLeftOperand() == 2){
+            return "2 + One";
+        }
+        return "3 + One";
+
     }
 }
